@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "anime-wiki-expansion",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-01",
+  "vars": {
+    "DISPATCH_ENABLED": "false",
+    "SITE_ORIGIN": "https://YOUR_USERNAME.github.io",
+    "GITHUB_OWNER": "YOUR_USERNAME",
+    "GITHUB_REPO": "Anime-Wiki",
+    "MAX_IP_JOBS": "2",
+    "MAX_DAILY_JOBS": "3"
+  },
+  "kv_namespaces": [{"binding":"REQUEST_KV", "id":"REPLACE_WITH_YOUR_KV_NAMESPACE_ID"}]
+}
