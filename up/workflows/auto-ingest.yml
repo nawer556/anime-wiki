@@ -1,0 +1,93 @@
+name: Controlled public Anime Wiki auto-ingest
+on:
+  repository_dispatch:
+    types: [anime_search]
+  workflow_dispatch:
+    inputs:
+      query:
+        description: "Search query; calling paid API requires explicit settings"
+        required: true
+        default: "科幻懸疑動畫電影"
+      media_type:
+        type: choice
+        options: [all, movie, tv]
+        default: all
+      genre:
+        default: all
+      duration:
+        type: choice
+        options: [all, '90', '120']
+        default: all
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+# Serialize ALL attempts, so daily budget can be recorded and checked between runs.
+concurrency:
+  group: anime-public-ingest
+  cancel-in-progress: false
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    env:
+      AUTO_INGEST_ENABLED: ${{ vars.AUTO_INGEST_ENABLED }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5-mini' }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      MAX_API_ATTEMPTS_PER_DAY: '3'
+      REQUEST_QUERY: ${{ github.event.client_payload.query || inputs.query }}
+      REQUEST_MEDIA: ${{ github.event.client_payload.media_type || inputs.media_type || 'all' }}
+      REQUEST_GENRE: ${{ github.event.client_payload.genre || inputs.genre || 'all' }}
+      REQUEST_DURATION: ${{ github.event.client_payload.duration || inputs.duration || 'all' }}
+    steps:
+      - name: Checkout verified Wiki
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+      - name: Python runtime
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Gate and run single AI ingest (disabled by default)
+        id: expand
+        continue-on-error: true
+        shell: bash
+        run: |
+          python scripts/auto_ingest.py --query "$REQUEST_QUERY" --media-type "$REQUEST_MEDIA" --genre "$REQUEST_GENRE" --duration "$REQUEST_DURATION"
+      - name: Commit verified changes or attempted-use budget
+        id: push
+        if: always()
+        shell: bash
+        env:
+          EXPAND_OUTCOME: ${{ steps.expand.outcome }}
+        run: |
+          git config user.name "anime-wiki-bot"
+          git config user.email "anime-wiki-bot@users.noreply.github.com"
+          if [ -f records/automation-budget.json ]; then
+            git add records/automation-budget.json
+          fi
+          if [ "$EXPAND_OUTCOME" = "success" ]; then
+            git add -- wiki/ raw/ index.md docs/ records/ log.md
+          fi
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Anime Wiki: automated verified update / budget checkpoint"
+            git push origin HEAD:main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Configure Pages after successful Wiki update
+        if: steps.expand.outcome == 'success' && steps.push.outputs.changed == 'true'
+        uses: actions/configure-pages@v5
+      - name: Upload current HTML + search portal
+        if: steps.expand.outcome == 'success' && steps.push.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./docs
+      - name: Deploy latest verified Wiki to Pages
+        if: steps.expand.outcome == 'success' && steps.push.outputs.changed == 'true'
+        uses: actions/deploy-pages@v4
+        id: deployment
+      - name: Explain disabled mode / unsafe requests
+        if: steps.expand.outcome != 'success'
+        run: echo "AI not enabled, source could not be validated, budget reached, or execution failed. No unvalidated Wiki/HTML changes were published."
