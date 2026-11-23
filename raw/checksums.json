@@ -1,0 +1,18 @@
+{
+  "algorithm": "sha256",
+  "policy": "append-only; existing entries cannot be changed during new Ingest",
+  "files": {
+    "SRC-001.md": "4fef47b7ae8d15b56c01a2d1f4fcd5e59d2b61f9a10f6f0f7a0453d348da5a5c",
+    "SRC-002.md": "b84bed00a7c8b4b4d0e6f40ef6c840c287233877f38f58d5ff6545a98eec909d",
+    "SRC-003.md": "12db49c15a41cd56f981b012543b729e6608dc58a1b750f5ff662fbff99ac35c",
+    "SRC-004.md": "4442cbb34c88fc622a5d3ef5c6a3ade03c20a37c49ee6772699b183e57acf397",
+    "SRC-005.md": "38c28258950365e26ace521650a2b05ccdf467c4c4b73f75aecebb0774c62102",
+    "SRC-006.md": "cfc4de5046c78bb4b9bf9fa7e96f5e43f5f09c0dac3f2615f4876bf8439076c8",
+    "SRC-007.md": "cfbea43bdde32224b0558ffabee8aa4c38325b7425851148626f8d616460da7d",
+    "SRC-008.md": "96c54296120625593ada3e381efebd21239145f2f183e1dd7f5b8c4e1bf6903d",
+    "SRC-009.md": "6f8691ebfffb331938a63e87f8a6298610e80e73b5c15ba5e7d8cf99f71bd403",
+    "SRC-010.md": "8f4e1b4f1843d7c086a9104e342d75ac5885a33f3309319ba36574db0bd7157a",
+    "SRC-011.md": "4de7c0873e7ba3ed9b0ab063fa93693bea0d5732c9e42a88470fa318f0a5fd61",
+    "SRC-012.md": "82a4b5dbc653a70ed601cac1e18b57e25b18fa6ecb125a5d52f18226d2825b1f"
+  }
+}

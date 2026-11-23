@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Anime Wiki：從可追溯來源的動漫知識庫搜尋作品與取得推薦。">
+<title>Anime Wiki｜公開動漫搜尋與推薦</title>
+<style>
+:root{color-scheme:dark;--bg:#0a1425;--panel:#122137;--panel2:#172b40;--edge:#2b4354;--fg:#f3f7fa;--sub:#a8bfd0;--mint:#70e6cb;--orange:#f6cb8b;font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse 950px 550px at 75% -8%,#1c4c57 0,transparent 75%),var(--bg);color:var(--fg)}a{color:var(--mint)}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.55;cursor:not-allowed}.shell{width:min(1130px,calc(100% - 40px));margin:auto}header{display:flex;justify-content:space-between;align-items:center;padding:24px 0;gap:16px}.brand{font-weight:850;font-size:21px;letter-spacing:.03em;color:var(--fg);text-decoration:none}.brand b{color:var(--mint)}nav{display:flex;gap:24px}nav a{font-size:14px;text-decoration:none;color:var(--sub)}nav a:hover{color:var(--mint)}.hero{padding:64px 0 32px;max-width:760px}.eyebrow{color:var(--mint);letter-spacing:.16em;font-size:12px;font-weight:850;text-transform:uppercase}.hero h1{font-size:clamp(36px,5.8vw,66px);letter-spacing:-.045em;line-height:1.1;margin:17px 0 19px}.hero h1 span{color:var(--mint)}.hero p{font-size:16px;color:var(--sub);line-height:1.85;max-width:620px;margin:0}.search-panel{padding:24px;border:1px solid var(--edge);background:linear-gradient(135deg,rgba(35,65,78,.55),rgba(18,33,55,.97));border-radius:22px;box-shadow:0 20px 55px rgba(0,0,0,.12)}.search-row{display:flex;gap:10px}.search-row input{flex:1;min-width:0;border-radius:12px;padding:16px 17px;color:var(--fg);background:#0a182a;border:1px solid #3a5a65;outline:none}.search-row input:focus{border-color:var(--mint);box-shadow:0 0 0 3px #70e6cb24}.primary{background:var(--mint);color:#072132;border:none;padding:14px 24px;border-radius:12px;font-weight:850}.primary:hover{background:#a1f4dc}.filters{display:flex;gap:14px;align-items:end;flex-wrap:wrap;margin-top:17px}.filters label{color:var(--sub);font-size:13px;display:flex;flex-direction:column;gap:7px}.filters select{min-width:145px;padding:11px 12px;color:var(--fg);background:#102039;border:1px solid var(--edge);border-radius:10px}.minor{color:var(--sub);font-size:12px;line-height:1.6;margin:12px 1px 0}.list-header{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:36px 0 14px}.list-header h2{font-size:23px;margin:0}.count{color:var(--sub);font-size:13px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{border:1px solid var(--edge);border-radius:16px;background:#13243a;padding:22px;display:flex;flex-direction:column;gap:12px}.card-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.pill{border:1px solid #305567;background:#1c3a50;color:#aff8e5;padding:5px 9px;border-radius:999px;font-size:12px}.card h3{font-size:21px;margin:0;line-height:1.45}.card .alt{font-size:12px;color:#8da8be;margin-top:-10px}.card .tags{color:var(--sub);font-size:14px}.card .src{font-size:12px;color:#7fe6d1;margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}.card .src a{overflow-wrap:anywhere}.card .detail{font-size:13px;color:var(--sub);line-height:1.65}.apply{display:inline-flex;justify-content:center;align-items:center;text-decoration:none;margin-top:3px;padding:10px 13px;border:1px solid var(--mint);border-radius:10px;color:var(--mint);font-weight:700;font-size:13px}.apply:hover{background:#70e6cb1d}.empty{border:1px dashed #997a4b;border-radius:16px;background:#302c2c;padding:29px;grid-column:1/-1}.empty h3{color:var(--orange);margin:0 0 8px}.empty p{color:#deccb6;line-height:1.75}.status{margin-top:15px;white-space:pre-line;line-height:1.7;font-size:14px;color:var(--sub)}.status.ok{color:var(--mint)}.status.warn{color:var(--orange)}.secondary{background:transparent;border:1px solid #658b8e;color:#aef6e2;padding:12px 18px;border-radius:12px;font-weight:700}.secondary:hover{border-color:var(--mint)}.request{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:18px}footer{color:#829bad;font-size:13px;padding:52px 0 30px;line-height:1.8}footer a{color:#b1ecd9}.summary{display:flex;gap:16px;flex-wrap:wrap;margin-top:21px;font-size:13px;color:var(--sub)}.summary strong{color:var(--mint)}.source-label{font-size:12px;color:#8fe5cd}.external-card{border-color:#405779;background:#14233a}.external-card .pill{color:#c2d7ff;border-color:#44649b;background:#243452}.external-note{color:var(--sub);font-size:13px;line-height:1.65}.external-action{font-size:13px;font-weight:700}.external-status{padding:12px 0;color:var(--sub);font-size:14px;white-space:pre-line}.external-section{margin-top:44px;padding-top:22px;border-top:1px solid var(--edge)}:focus-visible{outline:3px solid var(--mint);outline-offset:3px}@media(max-width:680px){.shell{width:min(100% - 28px,1130px)}header{align-items:flex-start}nav{gap:10px;flex-wrap:wrap;justify-content:flex-end}.hero{padding:34px 0 27px}.search-row{flex-direction:column}.cards{grid-template-columns:1fr}.filters select{min-width:128px}.search-panel{padding:17px}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header><a class="brand" href="search.html">✦ Anime <b>Wiki</b></a><nav><a href="index.html">教學 HTML 簡報</a><a href="../README.md" id="aboutLink" hidden>專案說明</a><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></nav></header>
+  <main>
+    <section class="hero"><div class="eyebrow">Karpathy-style · LLM Wiki</div><h1>下一部動畫，<br><span>從這裡開始。</span></h1><p>先查詢有來源的 Anime Wiki，也能用免費 API 搜尋資料庫外的日本動畫。支援中文、英文、日文名稱和「科幻」「戀愛」等類型；API 暫時故障時提供清楚標示的離線參考。</p><div id="summary" class="summary" aria-live="polite">正在載入 Wiki 資料…</div></section>
+    <form id="searchForm" class="search-panel" role="search">
+      <div class="search-row"><input id="keyword" aria-label="搜尋動漫名稱、類型、主題" placeholder="輸入中文／英文／日文動漫名稱，或科幻、戀愛、懸疑等類型" maxlength="80" autocomplete="off"><button class="primary" type="submit">搜尋動漫</button></div>
+      <div class="filters"><label>作品形式<select id="media"><option value="all">全部形式</option><option value="tv">TV 動畫</option><option value="movie">動畫電影</option></select></label><label>類型<select id="genre"><option value="all">全部類型</option></select></label><label>單部電影片長<select id="duration"><option value="all">不限</option><option value="90">90 分鐘以內</option><option value="120">120 分鐘以內</option></select></label></div>
+      <p class="minor">支援繁體／簡體中文、英文、日文名稱，以及中文、英文、日文類型詞。中文作品名稱會優先轉換為對應英文名稱再搜尋；部分未知譯名需仰賴維基百科對照。若外部 API 無法連線，會顯示標明「離線參考」的作品。</p>
+    </form>
+    <div class="list-header"><h2 id="resultsTitle">探索動漫</h2><span id="resultCount" class="count"></span></div>
+    <section id="results" class="cards" aria-live="polite"><div class="empty">資料載入中…</div></section>
+    <section class="external-section" aria-label="AniList／Kitsu／Jikan 免費外部動漫搜尋"><div class="list-header"><h2>探索更多動漫 · AniList／Kitsu／Jikan</h2><span id="externalCount" class="count">免費公開 API</span></div><p class="external-note">即時結果來自 Jikan、AniList 或 Kitsu；當 API 暫時失效，則可能顯示「離線參考」範例。外部與離線結果尚未收錄；可點「申請加入 Wiki」向站長送交 GitHub Issue，由管理者審核。核准後才執行 Ingest／Lint 與簡報更新。申請需要 GitHub 帳號。</p><div id="externalStatus" class="external-status" role="status" aria-live="polite">輸入「命運石之門」／「Steins;Gate」／「シュタインズ・ゲート」，或輸入「科幻」／「戀愛」探索作品。</div><div id="externalResults" class="cards"></div></section>
+    <div id="requestBox" class="request" hidden><button class="secondary" id="requestButton" type="button">申請收錄此搜尋關鍵字</button><span class="count">使用免費 GitHub Issues 送出申請，管理者審核後才 Ingest；不需要付費 AI。</span></div>
+    <div id="status" role="status" class="status" aria-live="polite"></div>
+  </main>
+  <footer>Anime Wiki · Raw Sources → Ingest → Lint → Wiki → HTML 簡報。本站可免費查詢 Wiki 與 AniList／Kitsu／Jikan 外部動漫；外部搜尋不會自動修改 Wiki，發布後的簡報仍使用已驗證的 Wiki 快照。<a href="index.html">閱讀教學簡報</a>。</footer>
+</div>
+<script src="assets/repository-config.js"></script>
+<script src="assets/issue-request.js"></script>
+<script src="assets/anilist-api.js?v=multi-20261123b"></script>
+<script>
+(() => {
+'use strict';
+const el=id=>document.getElementById(id);
+const state={works:[],sources:[],query:'',currentMatches:[],loading:true,externalRun:0};
+const setStatus=(msg,type='')=>{el('status').textContent=msg;el('status').className='status '+type};
+const norm=s=>String(s||'').trim().toLocaleLowerCase('zh-Hant');
+const qterms=q=>norm(q).replace(/[，。、；;!?！？/]/g,' ').split(/\s+/).filter(Boolean).filter(t=>!['請','幫我','推薦','日本','動畫','動漫','電影','想看','搜尋','一部','三部','作品','類型','的'].includes(t));
+const sourceMap=new Map();
+function matches(w, query, media, genre, duration){
+ if(media!=='all'&&w.media_type!==media)return false;
+ if(genre!=='all'&&!w.genres.includes(genre))return false;
+ if(duration!=='all'&&(!Number.isInteger(w.duration_minutes)||w.duration_minutes>Number(duration)))return false;
+ if(!query)return true;
+ const hay=norm([w.title,w.original_title,...w.genres,...w.themes,...w.moods].join(' '));
+ const terms=qterms(query);return terms.length?terms.every(t=>hay.includes(t)):true;
+}
+function card(w){
+ const item=document.createElement('article');item.className='card';
+ const top=document.createElement('div');top.className='card-head';
+ const pill=document.createElement('span');pill.className='pill';pill.textContent=w.media_type==='movie'?'動畫電影':'TV 動畫';
+ const id=document.createElement('span');id.className='count';id.textContent=w.id;top.append(pill,id);
+ const h=document.createElement('h3');h.textContent=w.title;
+ const alt=document.createElement('div');alt.className='alt';alt.textContent=w.original_title||'';
+ const genres=document.createElement('div');genres.className='tags';genres.textContent=[...(w.genres||[]),...(w.themes||[])].slice(0,6).join(' · ');
+ const details=document.createElement('div');details.className='detail';details.textContent=`${w.release_year||'年份待查'} 年 · ${w.media_type==='movie'?(w.duration_minutes?`${w.duration_minutes} 分鐘`:'片長待查'):'TV 影集'} · 內容為無劇透介紹`;
+ const sources=document.createElement('div');sources.className='src';
+ (w.source_ids||[]).forEach(id=>{const src=sourceMap.get(id);if(!src||!/^https:\/\//.test(src.url))return;const a=document.createElement('a');a.href=src.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='來源 '+id;sources.appendChild(a)});
+ item.append(top,h,alt,genres,details,sources);return item;
+}
+function render(){
+ if(state.loading)return;
+ const query=el('keyword').value.trim(),media=el('media').value,genre=el('genre').value,duration=el('duration').value;
+ state.query=query;state.currentMatches=state.works.filter(w=>matches(w,query,media,genre,duration));
+ const list=el('results');list.replaceChildren();el('resultsTitle').textContent=query?'搜尋結果':'探索動漫';el('resultCount').textContent=`${state.currentMatches.length} 部符合條件`;
+ if(state.currentMatches.length){state.currentMatches.slice(0,24).forEach(w=>list.appendChild(card(w)));el('requestBox').hidden=true;setStatus('');}
+ else{
+   const div=document.createElement('div');div.className='empty';div.innerHTML='<h3>目前 Wiki 沒有符合條件的作品</h3><p>按「搜尋動漫」會查詢免費 Jikan／AniList／Kitsu；遇到 API 異常時，也可以查看離線類型參考。外部或離線結果不會在驗證前寫入 Wiki。</p>';list.append(div);el('requestBox').hidden=!query;setStatus('');
+ }
+}
+async function load(){
+ try{
+  const r=await fetch('assets/wiki-snapshot.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);
+  const data=await r.json();if(!Array.isArray(data.works)||!Array.isArray(data.sources))throw new Error('Wiki 快照格式錯誤');
+  state.works=data.works;state.sources=data.sources;state.loading=false;sourceMap.clear();data.sources.forEach(s=>sourceMap.set(s.id,s));
+  const tags=[...new Set(data.works.flatMap(w=>w.genres||[]))].sort((a,b)=>a.localeCompare(b,'zh-Hant'));
+  const externalGenres=['科幻','懸疑','戀愛','奇幻','動作','冒險','喜劇','劇情','恐怖','運動','音樂','日常'];
+  externalGenres.forEach(t=>{if(!tags.includes(t))tags.push(t)});
+  tags.sort((a,b)=>a.localeCompare(b,'zh-Hant'));
+  el('genre').replaceChildren(new Option('全部類型','all'),...tags.map(t=>new Option(t,t)));
+  el('summary').replaceChildren();for(const v of [`${data.works.length} 部動漫`,` ${data.sources.length} 份來源`,`Wiki 更新：${String(data.generated_at||'未知').slice(0,10)}`]){const s=document.createElement('span');s.textContent=v;el('summary').appendChild(s)}
+  render();
+ }catch(err){state.loading=false;el('results').replaceChildren();const d=document.createElement('div');d.className='empty';d.textContent='載入 Wiki 失敗，請從 GitHub Pages 或本機 Live Server 開啟，而不是直接使用 file://。';el('results').appendChild(d);setStatus(String(err.message),'warn')}
+}
+function externalCard(w){
+ const item=document.createElement('article');item.className='card external-card';
+ const top=document.createElement('div');top.className='card-head';
+ const pill=document.createElement('span');pill.className='pill';pill.textContent=w.format==='MOVIE'?'動畫電影':w.format==='TV'||w.format==='TV_SHORT'?'TV 動畫':(w.format||'動畫');
+ const source=document.createElement('span');source.className='source-label';source.textContent=(w.provider==='離線參考'?'離線參考 · 非即時':(w.provider||'外部 API')+' · 未收錄');top.append(pill,source);
+ const h=document.createElement('h3');h.textContent=w.title;
+ const native=document.createElement('div');native.className='alt';native.textContent=w.original||'';
+ const tags=document.createElement('div');tags.className='tags';tags.textContent=w.genres.slice(0,5).join(' · ');
+ const info=document.createElement('div');info.className='detail';info.textContent=[w.year?`${w.year} 年`:'年份未知',w.format==='MOVIE'?(w.duration?`${w.duration} 分鐘`:'片長未知'):(w.episodes?`${w.episodes} 集`:'集數未知'),w.score!==null?`${w.provider||'外部平台'} 評分 ${w.score}/100`:''].filter(Boolean).join(' · ');
+ const desc=document.createElement('p');desc.className='detail';desc.textContent=w.description||'請查看外部資料庫的作品頁面取得更多資訊。';
+ const a=document.createElement('a');a.className='external-action';a.href=w.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=w.provider==='離線參考'?'在 MyAnimeList 搜尋並核對作品':'在 '+(w.provider||'外部平台')+' 查看作品與來源';
+ const apply=document.createElement('a');apply.className='apply';apply.textContent='＋ 申請加入 Anime Wiki';apply.target='_blank';apply.rel='noopener noreferrer';
+ const repo=window.AnimeIssueRequest.repository();
+ if(repo){apply.href=window.AnimeIssueRequest.buildUrl(w,repo)}else{
+   apply.href='#';apply.addEventListener('click',e=>{e.preventDefault();setStatus('請管理者先在 docs/assets/repository-config.js 設定「GitHub帳號/儲存庫名稱」，並啟用 GitHub Issues；目前尚無申請入口。','warn')});
+ }
+ const note=document.createElement('div');note.className='detail';note.textContent=(w.provider==='AniList'||w.provider==='Kitsu')?'站長核准後可透過免費 API 驗證並寫入 Wiki。':'可提出建議，但站長須先補 AniList／Kitsu 正式作品 ID 才能自動匯入。';
+ item.append(top,h,native,tags,info,desc,a,apply,note);return item;
+}
+async function searchExternal(){
+ const id=++state.externalRun;
+ const query=el('keyword').value.trim(), media=el('media').value, genre=el('genre').value, duration=el('duration').value;
+ const result=el('externalResults');result.replaceChildren();el('externalCount').textContent='';
+ el('externalStatus').textContent='正在辨識名稱或類型，查詢免費動漫 API（最多約 10 秒）…';
+ try{
+  const out=await window.AnimeExternalSearch.search(query,{media,genre,duration, onProgress: msg => {if(id===state.externalRun)el('externalStatus').textContent=msg;}});
+  if(id!==state.externalRun)return;
+  if(out.skipped){el('externalStatus').textContent='請輸入動漫名稱、類型關鍵字，或選擇一個類型再按搜尋。';return}
+  const canonical=s=>norm(s).replace(/[\s\p{P}\p{S}]/gu,'');
+  const known=new Set(state.works.flatMap(w=>[w.title,w.original_title].map(canonical)));
+  const entries=out.items.filter(w=>![w.title,w.original,...w.synonyms].some(t=>known.has(canonical(t))));
+  entries.forEach(w=>result.appendChild(externalCard(w)));
+  el('externalCount').textContent=`${entries.length} 部外部結果`;
+  el('externalStatus').textContent=(out.notice?out.notice+' ':'')+(entries.length?'這些結果尚未經 Wiki 驗證；正式加入需執行 Ingest／Lint。'+(out.cached?'（使用近期查詢快取）':''):(out.provider||'外部 API')+' 沒有找到符合條件的作品。可以放寬類型或作品形式再試一次。');
+ }catch(err){if(id!==state.externalRun)return;el('externalCount').textContent='暫時不可用';el('externalStatus').textContent='免費來源查詢失敗：'+String(err.message||err)+'。請檢查網路，或稍後重試；已收錄 Wiki 仍可正常搜尋。'}
+}
+el('searchForm').addEventListener('submit',e=>{e.preventDefault();render();searchExternal()});
+for(const n of ['media','genre','duration'])el(n).addEventListener('change',()=>{render();state.externalRun++;el('externalResults').replaceChildren();el('externalCount').textContent='AniList／Kitsu／Jikan 免費 API';el('externalStatus').textContent='篩選已變更，請按「搜尋動漫」重新查詢外部資料庫。'});
+el('requestButton').addEventListener('click',()=>{
+ const repo=window.AnimeIssueRequest.repository();
+ if(!repo){setStatus('請先設定 docs/assets/repository-config.js 的 GitHub 儲存庫名稱，才能開放訪客申請。','warn');return}
+ const suggestion={title:state.query,provider:'待補',id:'',original:'',url:''};
+ window.open(window.AnimeIssueRequest.buildUrl(suggestion,repo),'_blank','noopener,noreferrer');
+ setStatus('已開啟 GitHub Issue 申請頁。訪客需登入 GitHub 並確認送出，才算完成申請。','ok');
+});
+load();
+})();
+</script>
+</body></html>

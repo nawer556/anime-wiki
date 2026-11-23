@@ -1,0 +1,455 @@
+{
+  "as_of": "2026-11-18",
+  "generated_at": "2026-11-20T06:40:42+00:00",
+  "last_query": {
+    "searched_at": "2026-11-20T06:40:38+00:00",
+    "filters": {
+      "type": "movie",
+      "genre": "戀愛",
+      "theme": null,
+      "mood": null,
+      "max_minutes": 120
+    },
+    "status": "MATCH",
+    "total_matches": 1,
+    "matches": [
+      {
+        "id": "W007",
+        "title": "你的名字。",
+        "score": 1,
+        "wiki_path": "wiki/works/你的名字。.md",
+        "source_ids": [
+          "SRC-004",
+          "SRC-012"
+        ]
+      }
+    ],
+    "unknown_durations": [],
+    "note": "Offline query only. NO_MATCH requires a separate, authorized Codex auto-ingest; re-query after Ingest."
+  },
+  "wiki_index": "index.md",
+  "origin": "wiki/works/*.md and raw/manifest.json",
+  "recommendation_rules": "wiki/recommendations/推薦方法.md",
+  "notes": "genre, theme, mood, and pacing tags are Wiki editorial labels, not objective ratings",
+  "works": [
+    {
+      "id": "W001",
+      "title": "葬送的芙莉蓮",
+      "original_title": "葬送のフリーレン",
+      "media_type": "tv",
+      "release_year": 2023,
+      "duration_minutes": null,
+      "genres": [
+        "奇幻",
+        "冒險"
+      ],
+      "themes": [
+        "時間與記憶",
+        "成長",
+        "友情"
+      ],
+      "moods": [
+        "感動",
+        "沉思"
+      ],
+      "source_ids": [
+        "SRC-001"
+      ],
+      "path": "wiki/works/葬送的芙莉蓮.md",
+      "sources": [
+        {
+          "id": "SRC-001",
+          "url": "https://frieren-anime.jp/intro/",
+          "publisher": "《葬送のフリーレン》動畫官方網站"
+        }
+      ]
+    },
+    {
+      "id": "W002",
+      "title": "SPY×FAMILY 間諜家家酒",
+      "original_title": "SPY×FAMILY",
+      "media_type": "tv",
+      "release_year": 2022,
+      "duration_minutes": null,
+      "genres": [
+        "喜劇",
+        "動作"
+      ],
+      "themes": [
+        "家庭",
+        "身分與秘密",
+        "友情"
+      ],
+      "moods": [
+        "輕鬆",
+        "溫馨"
+      ],
+      "source_ids": [
+        "SRC-002"
+      ],
+      "path": "wiki/works/SPY×FAMILY 間諜家家酒.md",
+      "sources": [
+        {
+          "id": "SRC-002",
+          "url": "https://spy-family.net/tvseries/",
+          "publisher": "《SPY×FAMILY》TV 動畫官方網站"
+        }
+      ]
+    },
+    {
+      "id": "W003",
+      "title": "排球少年！！",
+      "original_title": "ハイキュー!!",
+      "media_type": "tv",
+      "release_year": 2014,
+      "duration_minutes": null,
+      "genres": [
+        "運動",
+        "熱血"
+      ],
+      "themes": [
+        "團隊合作",
+        "成長",
+        "友情"
+      ],
+      "moods": [
+        "振奮",
+        "熱血"
+      ],
+      "source_ids": [
+        "SRC-003"
+      ],
+      "path": "wiki/works/排球少年！！.md",
+      "sources": [
+        {
+          "id": "SRC-003",
+          "url": "https://haikyu.jp/",
+          "publisher": "《ハイキュー!!》動畫官方網站"
+        }
+      ]
+    },
+    {
+      "id": "W004",
+      "title": "孤獨搖滾！",
+      "original_title": "ぼっち・ざ・ろっく！",
+      "media_type": "tv",
+      "release_year": 2022,
+      "duration_minutes": null,
+      "genres": [
+        "音樂",
+        "喜劇",
+        "日常"
+      ],
+      "themes": [
+        "成長",
+        "友情",
+        "自我表達"
+      ],
+      "moods": [
+        "輕鬆",
+        "共鳴"
+      ],
+      "source_ids": [
+        "SRC-006"
+      ],
+      "path": "wiki/works/孤獨搖滾！.md",
+      "sources": [
+        {
+          "id": "SRC-006",
+          "url": "https://www.aniplex.co.jp/lineup/bocchi/",
+          "publisher": "Aniplex 動畫作品官方介紹"
+        }
+      ]
+    },
+    {
+      "id": "W005",
+      "title": "輝夜姬想讓人告白",
+      "original_title": "かぐや様は告らせたい",
+      "media_type": "tv",
+      "release_year": 2019,
+      "duration_minutes": null,
+      "genres": [
+        "戀愛",
+        "喜劇"
+      ],
+      "themes": [
+        "青春",
+        "自我表達",
+        "人際關係"
+      ],
+      "moods": [
+        "輕鬆",
+        "歡樂"
+      ],
+      "source_ids": [
+        "SRC-007"
+      ],
+      "path": "wiki/works/輝夜姬想讓人告白.md",
+      "sources": [
+        {
+          "id": "SRC-007",
+          "url": "https://kaguya.love/1st/index.html",
+          "publisher": "《かぐや様は告らせたい》TV 第一季官方網站"
+        }
+      ]
+    },
+    {
+      "id": "W006",
+      "title": "ODDTAXI 奇巧計程車",
+      "original_title": "オッドタクシー",
+      "media_type": "tv",
+      "release_year": 2021,
+      "duration_minutes": null,
+      "genres": [
+        "懸疑",
+        "推理"
+      ],
+      "themes": [
+        "人際關係",
+        "身分與秘密",
+        "都市生活"
+      ],
+      "moods": [
+        "緊張",
+        "沉思"
+      ],
+      "source_ids": [
+        "SRC-008"
+      ],
+      "path": "wiki/works/ODDTAXI 奇巧計程車.md",
+      "sources": [
+        {
+          "id": "SRC-008",
+          "url": "https://www.tv-tokyo.co.jp/anime/oddtaxi/story/",
+          "publisher": "東京電視台《オッドタクシー》動畫官方介紹"
+        }
+      ]
+    },
+    {
+      "id": "W007",
+      "title": "你的名字。",
+      "original_title": "君の名は。",
+      "media_type": "movie",
+      "release_year": 2016,
+      "duration_minutes": 107,
+      "genres": [
+        "戀愛",
+        "奇幻"
+      ],
+      "themes": [
+        "連結與命運",
+        "青春",
+        "時間與記憶"
+      ],
+      "moods": [
+        "感動",
+        "浪漫"
+      ],
+      "source_ids": [
+        "SRC-004",
+        "SRC-012"
+      ],
+      "path": "wiki/works/你的名字。.md",
+      "sources": [
+        {
+          "id": "SRC-004",
+          "url": "https://kiminona.com/",
+          "publisher": "《君の名は。》電影官方網站"
+        },
+        {
+          "id": "SRC-012",
+          "url": "https://jfdb.jp/en/title/6450",
+          "publisher": "Japanese Film Database（JFDB／UNIJAPAN）"
+        }
+      ]
+    },
+    {
+      "id": "W008",
+      "title": "聲之形",
+      "original_title": "映画 聲の形",
+      "media_type": "movie",
+      "release_year": 2016,
+      "duration_minutes": 129,
+      "genres": [
+        "劇情",
+        "青春"
+      ],
+      "themes": [
+        "人際關係",
+        "成長",
+        "自我接納"
+      ],
+      "moods": [
+        "沉重",
+        "感動"
+      ],
+      "source_ids": [
+        "SRC-005",
+        "SRC-011"
+      ],
+      "path": "wiki/works/聲之形.md",
+      "sources": [
+        {
+          "id": "SRC-005",
+          "url": "https://koenokatachi-movie.com/introduction/",
+          "publisher": "《映画 聲の形》電影官方網站"
+        },
+        {
+          "id": "SRC-011",
+          "url": "https://movies.shochiku.co.jp/100th/eigakoenokatachi/",
+          "publisher": "松竹電影官方資料"
+        }
+      ]
+    },
+    {
+      "id": "W009",
+      "title": "神隱少女",
+      "original_title": "千と千尋の神隠し",
+      "media_type": "movie",
+      "release_year": 2001,
+      "duration_minutes": 125,
+      "genres": [
+        "奇幻",
+        "冒險"
+      ],
+      "themes": [
+        "成長",
+        "自我認同",
+        "家庭"
+      ],
+      "moods": [
+        "奇幻",
+        "感動"
+      ],
+      "source_ids": [
+        "SRC-009"
+      ],
+      "path": "wiki/works/神隱少女.md",
+      "sources": [
+        {
+          "id": "SRC-009",
+          "url": "https://www.ghibli.jp/works/chihiro/",
+          "publisher": "吉卜力工作室《千と千尋の神隠し》官方作品頁"
+        }
+      ]
+    },
+    {
+      "id": "W010",
+      "title": "灌籃高手 THE FIRST SLAM DUNK",
+      "original_title": "THE FIRST SLAM DUNK",
+      "media_type": "movie",
+      "release_year": 2022,
+      "duration_minutes": 124,
+      "genres": [
+        "運動",
+        "熱血"
+      ],
+      "themes": [
+        "團隊合作",
+        "家庭",
+        "成長"
+      ],
+      "moods": [
+        "振奮",
+        "感動"
+      ],
+      "source_ids": [
+        "SRC-010"
+      ],
+      "path": "wiki/works/灌籃高手 THE FIRST SLAM DUNK.md",
+      "sources": [
+        {
+          "id": "SRC-010",
+          "url": "https://jfdb.jp/title/9789",
+          "publisher": "Japanese Film Database（JFDB，日本電影資料庫）"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "title": "葬送的芙莉蓮",
+      "url": "https://frieren-anime.jp/intro/",
+      "publisher": "《葬送のフリーレン》動畫官方網站",
+      "wiki_raw_file": "raw/sources/SRC-001.md"
+    },
+    {
+      "id": "SRC-002",
+      "title": "SPY×FAMILY 間諜家家酒",
+      "url": "https://spy-family.net/tvseries/",
+      "publisher": "《SPY×FAMILY》TV 動畫官方網站",
+      "wiki_raw_file": "raw/sources/SRC-002.md"
+    },
+    {
+      "id": "SRC-003",
+      "title": "排球少年！！",
+      "url": "https://haikyu.jp/",
+      "publisher": "《ハイキュー!!》動畫官方網站",
+      "wiki_raw_file": "raw/sources/SRC-003.md"
+    },
+    {
+      "id": "SRC-004",
+      "title": "你的名字。",
+      "url": "https://kiminona.com/",
+      "publisher": "《君の名は。》電影官方網站",
+      "wiki_raw_file": "raw/sources/SRC-004.md"
+    },
+    {
+      "id": "SRC-005",
+      "title": "聲之形",
+      "url": "https://koenokatachi-movie.com/introduction/",
+      "publisher": "《映画 聲の形》電影官方網站",
+      "wiki_raw_file": "raw/sources/SRC-005.md"
+    },
+    {
+      "id": "SRC-006",
+      "title": "孤獨搖滾！",
+      "url": "https://www.aniplex.co.jp/lineup/bocchi/",
+      "publisher": "Aniplex 動畫作品官方介紹",
+      "wiki_raw_file": "raw/sources/SRC-006.md"
+    },
+    {
+      "id": "SRC-007",
+      "title": "輝夜姬想讓人告白",
+      "url": "https://kaguya.love/1st/index.html",
+      "publisher": "《かぐや様は告らせたい》TV 第一季官方網站",
+      "wiki_raw_file": "raw/sources/SRC-007.md"
+    },
+    {
+      "id": "SRC-008",
+      "title": "ODDTAXI 奇巧計程車",
+      "url": "https://www.tv-tokyo.co.jp/anime/oddtaxi/story/",
+      "publisher": "東京電視台《オッドタクシー》動畫官方介紹",
+      "wiki_raw_file": "raw/sources/SRC-008.md"
+    },
+    {
+      "id": "SRC-009",
+      "title": "神隱少女",
+      "url": "https://www.ghibli.jp/works/chihiro/",
+      "publisher": "吉卜力工作室《千と千尋の神隠し》官方作品頁",
+      "wiki_raw_file": "raw/sources/SRC-009.md"
+    },
+    {
+      "id": "SRC-010",
+      "title": "灌籃高手 THE FIRST SLAM DUNK",
+      "url": "https://jfdb.jp/title/9789",
+      "publisher": "Japanese Film Database（JFDB，日本電影資料庫）",
+      "wiki_raw_file": "raw/sources/SRC-010.md"
+    },
+    {
+      "id": "SRC-011",
+      "title": "聲之形：片長補充",
+      "url": "https://movies.shochiku.co.jp/100th/eigakoenokatachi/",
+      "publisher": "松竹電影官方資料",
+      "wiki_raw_file": "raw/sources/SRC-011.md"
+    },
+    {
+      "id": "SRC-012",
+      "title": "你的名字。：107 分鐘片長補充",
+      "url": "https://jfdb.jp/en/title/6450",
+      "publisher": "Japanese Film Database（JFDB／UNIJAPAN）",
+      "wiki_raw_file": "raw/sources/SRC-012.md"
+    }
+  ]
+}

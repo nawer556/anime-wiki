@@ -1,0 +1,26 @@
+{
+  "searched_at": "2026-11-20T06:40:38+00:00",
+  "filters": {
+    "type": "movie",
+    "genre": "戀愛",
+    "theme": null,
+    "mood": null,
+    "max_minutes": 120
+  },
+  "status": "MATCH",
+  "total_matches": 1,
+  "matches": [
+    {
+      "id": "W007",
+      "title": "你的名字。",
+      "score": 1,
+      "wiki_path": "wiki/works/你的名字。.md",
+      "source_ids": [
+        "SRC-004",
+        "SRC-012"
+      ]
+    }
+  ],
+  "unknown_durations": [],
+  "note": "Offline query only. NO_MATCH requires a separate, authorized Codex auto-ingest; re-query after Ingest."
+}

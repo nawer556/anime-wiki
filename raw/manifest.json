@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-11-18",
+  "read_only_after_ingest": true,
+  "sources": [
+    {
+      "id": "SRC-001",
+      "work_id": "W001",
+      "title": "葬送的芙莉蓮",
+      "url": "https://frieren-anime.jp/intro/",
+      "publisher": "《葬送のフリーレン》動畫官方網站",
+      "kind": "official",
+      "retrieved_on": "2026-11-18",
+      "raw_file": "raw/sources/SRC-001.md",
+      "status": "processed",
+      "scope": "單一可追溯來源；本機保存原創摘要，未複製原文全文"
+    },
+    {
+      "id": "SRC-002",
+      "work_id": "W002",
+      "title": "SPY×FAMILY 間諜家家酒",
+      "url": "https://spy-family.net/tvseries/",
+      "publisher": "《SPY×FAMILY》TV 動畫官方網站",
+      "kind": "official",
+      "retrieved_on": "2026-11-18",
+      "raw_file": "raw/sources/SRC-002.md",
+      "status": "processed",
+      "scope": "單一可追溯來源；本機保存原創摘要，未複製原文全文"
+    },
+    {
+      "id": "SRC-003",
+      "work_id": "W003",
+      "title": "排球少年！！",
+      "url": "https://haikyu.jp/",
+      "publisher": "《ハイキュー!!》動畫官方網站",
+      "kind": "official",
+      "retrieved_on": "2026-11-18",
+      "raw_file": "raw/sources/SRC-003.md",
+      "status": "processed",
+      "scope": "單一可追溯來源；本機保存原創摘要，未複製原文全文"
+    },
+    {
+      "id": "SRC-004",
+      "work_id": "W007",
+      "title": "你的名字。",
+      "url": "https://kiminona.com/",
+      "publisher": "《君の名は。》電影官方網站",
+      "kind": "official",
+      "retrieved_on": "2026-11-18",
+      "raw_file": "raw/sources/SRC-004.md",
+      "status": "processed",
+      "scope": "單一可追溯來源；本機保存原創摘要，未複製原文全文"
+    },
+    {
+      "id": "SRC-005",
+      "work_id": "W008",
+      "title": "聲之形",
+      "url": "https://koenokatachi-movie.com/introduction/",
+      "publisher": "《映画 聲の形》電影官方網站",
+      "kind": "official",
+      "retrieved_on": "2026-11-18",
+      "raw_file": "raw/sources/SRC-005.md",
+      "status": "processed",
+      "scope": "單一可追溯來源；本機保存原創摘要，未複製原文全文"
+    },
+    {
+      "id": "SRC-006",
+      "work_id": "W004",
+      "title": "孤獨搖滾！",
+      "url": "https://www.aniplex.co.jp/lineup/bocchi/",
+      "publisher": "Aniplex 動畫作品官方介紹",
+      "kind": "official",
+      "retrieved_on": "2026-11-18",
+      "raw_file": "raw/sources/SRC-006.md",
+      "status": "processed",
+      "scope": "單一可追溯來源；本機保存原創摘要，未複製原文全文"
+    },
+    {
+      "id": "SRC-007",
+      "work_id": "W005",
+      "title": "輝夜姬想讓人告白",
+      "url": "https://kaguya.love/1st/index.html",
+      "publisher": "《かぐや様は告らせたい》TV 第一季官方網站",
+      "kind": "official",
+      "retrieved_on": "2026-11-18",
+      "raw_file": "raw/sources/SRC-007.md",
+      "status": "processed",
+      "scope": "單一可追溯來源；本機保存原創摘要，未複製原文全文"
+    },
+    {
+      "id": "SRC-008",
+      "work_id": "W006",
+      "title": "ODDTAXI 奇巧計程車",
+      "url": "https://www.tv-tokyo.co.jp/anime/oddtaxi/story/",
+      "publisher": "東京電視台《オッドタクシー》動畫官方介紹",
+      "kind": "official",
+      "retrieved_on": "2026-11-18",
+      "raw_file": "raw/sources/SRC-008.md",
+      "status": "processed",
+      "scope": "單一可追溯來源；本機保存原創摘要，未複製原文全文"
+    },
+    {
+      "id": "SRC-009",
+      "work_id": "W009",
+      "title": "神隱少女",
+      "url": "https://www.ghibli.jp/works/chihiro/",
+      "publisher": "吉卜力工作室《千と千尋の神隠し》官方作品頁",
+      "kind": "official",
+      "retrieved_on": "2026-11-18",
+      "raw_file": "raw/sources/SRC-009.md",
+      "status": "processed",
+      "scope": "單一可追溯來源；本機保存原創摘要，未複製原文全文"
+    },
+    {
+      "id": "SRC-010",
+      "work_id": "W010",
+      "title": "灌籃高手 THE FIRST SLAM DUNK",
+      "url": "https://jfdb.jp/title/9789",
+      "publisher": "Japanese Film Database（JFDB，日本電影資料庫）",
+      "kind": "film_database",
+      "retrieved_on": "2026-11-18",
+      "raw_file": "raw/sources/SRC-010.md",
+      "status": "processed",
+      "scope": "單一可追溯來源；本機保存原創摘要，未複製原文全文"
+    },
+    {
+      "id": "SRC-011",
+      "work_id": "W008",
+      "title": "聲之形：片長補充",
+      "url": "https://movies.shochiku.co.jp/100th/eigakoenokatachi/",
+      "publisher": "松竹電影官方資料",
+      "kind": "distributor",
+      "retrieved_on": "2026-11-18",
+      "raw_file": "raw/sources/SRC-011.md",
+      "status": "processed",
+      "scope": "片長補充來源"
+    },
+    {
+      "id": "SRC-012",
+      "work_id": "W007",
+      "title": "你的名字。：107 分鐘片長補充",
+      "url": "https://jfdb.jp/en/title/6450",
+      "publisher": "Japanese Film Database（JFDB／UNIJAPAN）",
+      "kind": "film_database",
+      "retrieved_on": "2026-11-18",
+      "raw_file": "raw/sources/SRC-012.md",
+      "status": "processed",
+      "scope": "補充既有作品 W007 的電影片長 107 分鐘，示範增量 Ingest"
+    }
+  ]
+}
