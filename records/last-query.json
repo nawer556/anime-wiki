@@ -1,26 +1,25 @@
 {
-  "searched_at": "2026-11-20T06:40:38+00:00",
+  "searched_at": "2026-11-23T13:54:57+00:00",
   "filters": {
-    "type": "movie",
-    "genre": "戀愛",
+    "type": "tv",
+    "genre": null,
     "theme": null,
     "mood": null,
-    "max_minutes": 120
+    "max_minutes": null
   },
   "status": "MATCH",
   "total_matches": 1,
   "matches": [
     {
-      "id": "W007",
-      "title": "你的名字。",
+      "id": "W011",
+      "title": "命運石之門",
       "score": 1,
-      "wiki_path": "wiki/works/你的名字。.md",
+      "wiki_path": "wiki/works/命運石之門.md",
       "source_ids": [
-        "SRC-004",
-        "SRC-012"
+        "SRC-013"
       ]
     }
   ],
   "unknown_durations": [],
-  "note": "Offline query only. NO_MATCH requires a separate, authorized Codex auto-ingest; re-query after Ingest."
+  "note": "Public auto-ingest: verified title/source and re-built slides. Original visitor query intentionally not published."
 }

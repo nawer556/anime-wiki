@@ -337,3 +337,19 @@
 - 用測試副本的《命運石之門》模擬 Ingest，確認 Wiki 10→11 部，來源 12→13 份，不影響實際知識庫。
 - 來源 SHA-256、Wiki Lint、HTML 簡報結構測試通過。GitHub 真正上線與免費 API 實連仍待使用者驗證。
 - 詳細證據見 `records/runs/approved-issues-20261123.md`。
+
+### 2026-11-23T13:54:57+00:00 | AUTO-SLIDE-SYNC | PASS
+- Trigger: `ingest`
+- Result: Sources + Wiki Lint + Graph + HTML build + Slide Lint PASS
+- Outputs: `docs/index.html`, `docs/assets/wiki-snapshot.json`, `records/slide-sources.md` (on PASS only)
+
+### 2026-11-23T13:54:57+00:00 | PUBLIC-AUTO-INGEST | PASS
+- 作品：W011 命運石之門
+- 來源：SRC-013 https://anilist.co/anime/9253
+- 結果：Lint 與 HTML 已驗證，網站更新需 GitHub Actions 推送及部署完成。
+
+### 2026-11-23T13:54:57+00:00 | APPROVED-INGEST | PASS
+- GitHub Issue: #2
+- 作品：W011 命運石之門
+- 來源：SRC-013 https://anilist.co/anime/9253
+- 管理者已批准 Issue；已用免費 API 核對作品 ID、形式及分類，執行 Lint 並重建簡報。

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "as_of": "2026-11-18",
+  "as_of": "2026-11-23",
   "read_only_after_ingest": true,
   "sources": [
     {
@@ -146,6 +146,18 @@
       "raw_file": "raw/sources/SRC-012.md",
       "status": "processed",
       "scope": "補充既有作品 W007 的電影片長 107 分鐘，示範增量 Ingest"
+    },
+    {
+      "id": "SRC-013",
+      "work_id": "W011",
+      "title": "命運石之門",
+      "url": "https://anilist.co/anime/9253",
+      "publisher": "AniList 公開動漫資料庫",
+      "kind": "web_checked",
+      "retrieved_on": "2026-11-23",
+      "raw_file": "raw/sources/SRC-013.md",
+      "status": "processed",
+      "scope": "自動擴充：網頁名稱與形式基本核對；年份及片長若無明確證據就保留未知"
     }
   ]
 }

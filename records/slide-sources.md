@@ -1,7 +1,7 @@
 # HTML 教學簡報 ↔ Anime Wiki 來源對照
 
-> 生成時間：2026-11-20T06:40:42+00:00（UTC） · Wiki 來源索引日期：2026-11-18。
-> 作品 10 部（TV 6、電影 4），來源 12 份。
+> 生成時間：2026-11-23T13:54:57+00:00（UTC） · Wiki 來源索引日期：2026-11-23。
+> 作品 11 部（TV 7、電影 4），來源 13 份。
 > 由 `scripts/build_slides.py` 讀取已驗證的 Wiki 生成固定 HTML；每次本機 Query 會自動重新生成並檢查。
 
 | 頁次 | 教學內容 | Wiki 根據 |
@@ -10,7 +10,7 @@
 | 02 | 如何選作品 | `wiki/recommendations/推薦方法.md` |
 | 03 | TV 與電影，片長已驗證樣例 | `wiki/works/*.md` 與各自 SRC-ID |
 | 04 | 類型與主題 | `wiki/genres/奇幻.md`、`wiki/themes/成長.md` |
-| 05 | **全部 10 部作品地圖** | 全部 `wiki/works/*.md`；詳見下表 |
+| 05 | **全部 11 部作品地圖** | 全部 `wiki/works/*.md`；詳見下表 |
 | 06 | 類型比較案例 | `wiki/comparisons/奇幻作品比較.md`、`wiki/comparisons/運動作品比較.md` |
 | 07 | 混合推薦規則 | `wiki/recommendations/推薦方法.md`、`workflow.md` |
 | 08 | **最近一次 Query 結果 + 互動推薦** | `records/last-query.json`、`docs/assets/wiki-snapshot.json`、作品各自 SRC-ID |
@@ -31,34 +31,34 @@
 | W008 · 聲之形 | `wiki/works/聲之形.md` | SRC-005, SRC-011 |
 | W009 · 神隱少女 | `wiki/works/神隱少女.md` | SRC-009 |
 | W010 · 灌籃高手 THE FIRST SLAM DUNK | `wiki/works/灌籃高手 THE FIRST SLAM DUNK.md` | SRC-010 |
+| W011 · 命運石之門 | `wiki/works/命運石之門.md` | SRC-013 |
 
 ## 最近一次 Wiki 搜尋
 
 {
-  "searched_at": "2026-11-20T06:40:38+00:00",
+  "searched_at": "2026-11-23T13:54:57+00:00",
   "filters": {
-    "type": "movie",
-    "genre": "戀愛",
+    "type": "tv",
+    "genre": null,
     "theme": null,
     "mood": null,
-    "max_minutes": 120
+    "max_minutes": null
   },
   "status": "MATCH",
   "total_matches": 1,
   "matches": [
     {
-      "id": "W007",
-      "title": "你的名字。",
+      "id": "W011",
+      "title": "命運石之門",
       "score": 1,
-      "wiki_path": "wiki/works/你的名字。.md",
+      "wiki_path": "wiki/works/命運石之門.md",
       "source_ids": [
-        "SRC-004",
-        "SRC-012"
+        "SRC-013"
       ]
     }
   ],
   "unknown_durations": [],
-  "note": "Offline query only. NO_MATCH requires a separate, authorized Codex auto-ingest; re-query after Ingest."
+  "note": "Public auto-ingest: verified title/source and re-built slides. Original visitor query intentionally not published."
 }
 
 ## 說明與限制
