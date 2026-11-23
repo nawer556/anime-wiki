@@ -1,0 +1,95 @@
+name: Approved community anime import (free)
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: anime-approved-import
+  cancel-in-progress: false
+
+jobs:
+  import:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # A public Issue alone NEVER invokes an import. Only a maintainer may add this label.
+    if: github.event.label.name == 'approved-ingest' && github.event.issue.state == 'open' && !github.event.issue.pull_request && github.actor == github.repository_owner
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out maintained Wiki
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch approved issue and import validated free API metadata
+        id: import
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python scripts/approved_issue_ingest.py --issue-number "$ISSUE_NUMBER"
+      - name: Ensure generated Wiki, source notes and slides pass checks
+        id: validate
+        if: steps.import.outcome == 'success'
+        continue-on-error: true
+        run: |
+          python scripts/check_sources.py
+          python scripts/lint_wiki.py
+          python scripts/audit_wiki.py
+          python scripts/check_slides.py
+      - name: Commit and push approved source + Wiki + slideshow
+        id: commit
+        if: steps.import.outcome == 'success' && steps.validate.outcome == 'success'
+        continue-on-error: true
+        run: |
+          git config user.name 'anime-wiki-bot'
+          git config user.email 'anime-wiki-bot@users.noreply.github.com'
+          git add -- raw/ wiki/ docs/ index.md log.md records/
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'; exit 1
+          fi
+          git commit -m "Anime Wiki: owner-approved issue #${{ github.event.issue.number }}"
+          git push origin HEAD:main
+      # Pushes made with GITHUB_TOKEN do not trigger another push workflow;
+      # deploy the newly-built docs explicitly in this workflow.
+      - name: Configure GitHub Pages
+        if: steps.commit.outcome == 'success'
+        uses: actions/configure-pages@v5
+      - name: Upload website artifact
+        if: steps.commit.outcome == 'success'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./docs
+      - name: Deploy updated Wiki snapshot + slides
+        id: deployment
+        if: steps.commit.outcome == 'success'
+        uses: actions/deploy-pages@v4
+      - name: Report successful import and close issue
+        if: success() && steps.deployment.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue close "$ISSUE_NUMBER" --comment '✅ 管理者核准的作品已通過免費 API 核對、Ingest、Lint，且 Wiki 與教學 HTML 已重新部署。'
+      - name: Explain import failure, keep issue open for review
+        if: always() && (steps.import.outcome != 'success' || steps.validate.outcome == 'failure' || steps.commit.outcome == 'failure' || steps.deployment.outcome == 'failure')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body '⚠️ 自動收錄未完成：免費 API 無法取得／來源不符／Wiki 驗證或儲存庫寫入失敗。請檢查 Actions 工作紀錄，修正 Issue 後重新套用 `approved-ingest` 標籤。未驗證的更新不應發布。'
+          gh issue edit "$ISSUE_NUMBER" --remove-label approved-ingest
