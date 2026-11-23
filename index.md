@@ -1,6 +1,6 @@
 # Anime Wiki｜知識索引
 
-> 更新：2026-11-23｜收錄：11 部（TV 7 + Movie 4）、原始資料筆記 13 筆（10 份初始作品來源、2 份補充來源）。
+> 更新：2026-11-23｜收錄：12 部（TV 8 + Movie 4）、原始資料筆記 14 筆（10 份初始作品來源、2 份補充來源）。
 
 ## 作品（Works）
 
@@ -16,6 +16,8 @@
 - [灌籃高手 THE FIRST SLAM DUNK](wiki/works/灌籃高手 THE FIRST SLAM DUNK.md) — 動畫電影；運動, 熱血；SRC-010
 
 - [命運石之門](wiki/works/命運石之門.md) — 電視動畫；劇情, 推理, 科幻；SRC-013
+
+- [DAN DA DAN](wiki/works/DAN DA DAN.md) — 電視動畫；動作, 喜劇, 劇情；SRC-014
 
 ## 動漫類型（Genres）
 

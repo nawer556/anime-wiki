@@ -353,3 +353,19 @@
 - 作品：W011 命運石之門
 - 來源：SRC-013 https://anilist.co/anime/9253
 - 管理者已批准 Issue；已用免費 API 核對作品 ID、形式及分類，執行 Lint 並重建簡報。
+
+### 2026-11-23T15:32:39+00:00 | AUTO-SLIDE-SYNC | PASS
+- Trigger: `ingest`
+- Result: Sources + Wiki Lint + Graph + HTML build + Slide Lint PASS
+- Outputs: `docs/index.html`, `docs/assets/wiki-snapshot.json`, `records/slide-sources.md` (on PASS only)
+
+### 2026-11-23T15:32:39+00:00 | PUBLIC-AUTO-INGEST | PASS
+- 作品：W012 DAN DA DAN
+- 來源：SRC-014 https://anilist.co/anime/171018
+- 結果：Lint 與 HTML 已驗證，網站更新需 GitHub Actions 推送及部署完成。
+
+### 2026-11-23T15:32:39+00:00 | APPROVED-INGEST | PASS
+- GitHub Issue: #3
+- 作品：W012 DAN DA DAN
+- 來源：SRC-014 https://anilist.co/anime/171018
+- 管理者已批准 Issue；已用免費 API 核對作品 ID、形式及分類，執行 Lint 並重建簡報。

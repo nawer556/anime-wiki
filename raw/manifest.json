@@ -158,6 +158,18 @@
       "raw_file": "raw/sources/SRC-013.md",
       "status": "processed",
       "scope": "自動擴充：網頁名稱與形式基本核對；年份及片長若無明確證據就保留未知"
+    },
+    {
+      "id": "SRC-014",
+      "work_id": "W012",
+      "title": "DAN DA DAN",
+      "url": "https://anilist.co/anime/171018",
+      "publisher": "AniList 公開動漫資料庫",
+      "kind": "web_checked",
+      "retrieved_on": "2026-11-23",
+      "raw_file": "raw/sources/SRC-014.md",
+      "status": "processed",
+      "scope": "自動擴充：網頁名稱與形式基本核對；年份及片長若無明確證據就保留未知"
     }
   ]
 }
